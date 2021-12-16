@@ -69,7 +69,7 @@ Both the config and certificate files will be mounted to the `etc/nginx` & `lets
 
 1. Run `docker-compose up`
 
-## Accessing Coder & finalizing configuration
+## 3. Access Coder & finalize configuration
 
 1. Access Coder via your secure domain
 
@@ -77,4 +77,4 @@ Both the config and certificate files will be mounted to the `etc/nginx` & `lets
 
 1. Navigate to **Manage** > **Admin** > **Infrastructure** and update the **Access URL** with your domain
 
-Happy coding!
+### Happy coding!
