@@ -1,17 +1,6 @@
 version: '3'
 
 services:
-  coder:
-    hostname: coder
-    image: codercom/coder:1.25.1
-    container_name: coder
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - ~/.coder:/var/run/coder
-    ports:
-      - 7080:7080
-    environment:
-      - DEVURL_HOST="*.lotr.ericpaulsen.io"
   letsencrypt:
     image: linuxserver/letsencrypt
     container_name: letsencrypt
@@ -27,8 +16,8 @@ services:
     volumes:
       - "~/letsencrypt:/config"
     restart: unless-stopped
-  reverse:
-    container_name: reverse
+  nginx:
+    container_name: nginx
     hostname: reverse
     image: nginx
     ports:
@@ -37,3 +26,14 @@ services:
     volumes:
       - "nginx:/etc/nginx"
       - "~/letsencrypt:/letsencrypt/"
+  coder:
+    hostname: coder
+    image: codercom/coder:1.25.1
+    container_name: coder
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ~/.coder:/var/run/coder
+    ports:
+      - 7080:7080
+    environment:
+      - DEVURL_HOST="*.lotr.ericpaulsen.io"
