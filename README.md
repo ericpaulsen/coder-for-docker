@@ -33,7 +33,7 @@ docker run --rm -it -p 7080:7080 \
 
 - (Optional) Set `EMAIL` & `TZ` to the relevant values
 
-1. Leave the following variables as is:
+3. Leave the following variables as is:
 
 - `SUBDOMAINS=wildcard`
 
@@ -41,7 +41,7 @@ docker run --rm -it -p 7080:7080 \
 
 - `VALIDATION=dns`
 
-1. Mount the volume to a folder that doesn't yet exist.
+4. Mount the volume to a folder that doesn't yet exist.
 
 > Docker will automatically create the folder, and populate it with the contents of the container, which in this case, will be various `.ini` files.
 
@@ -67,7 +67,7 @@ In contrast to the `letsencrypt` container, the `nginx` container requires havin
 
 Both the config and certificate files will be mounted to the `etc/nginx` & `letsencrypt` directories inside the container, respectively.
 
-1. Run `docker-compose up`
+2. Run `docker-compose up`
 
 ## 3. Access Coder & finalize configuration
 
