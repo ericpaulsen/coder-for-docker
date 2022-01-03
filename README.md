@@ -1,6 +1,6 @@
 # Deploying Coder on Docker Desktop
 
-Clone this repository to run a TLS-enabled Coder deployment on your Docker Desktop client. The `docker-compose.yaml` file defines the Coder container and an `nginx` reverse proxy to route traffic over HTTPS. It also includes the `linuxserver/letsencrypt` image to handle DNS validation for your domain, if necessary.
+Clone this repository to run a TLS-enabled Coder deployment on Docker Desktop. The `docker-compose.yaml` file defines the Coder container and an `nginx` reverse proxy to route traffic over HTTPS. It also includes the `linuxserver/letsencrypt` image to handle DNS validation for your domain, if necessary.
 
 Note that a domain is not *required* to run Coder on Docker. To access Coder over `localhost`, use the command below:
 
