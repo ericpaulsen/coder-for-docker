@@ -36,4 +36,4 @@ services:
     ports:
       - 7080:7080
     environment:
-      - DEVURL_HOST="*.lotr.ericpaulsen.io"
+      - DEVURL_HOST="*.example.com"

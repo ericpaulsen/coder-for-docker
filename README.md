@@ -55,9 +55,9 @@ You should now see your SSL certificate files in `/path/to/config/etc/letsencryp
 
 ## 2. Configure Nginx & Coder containers
 
-In contrast to the `letsencrypt` container, the `nginx` container requires having a config folder on your host. The two required configuration files are `nginx.conf` and `default.conf`, which are included in the `nginx` directory of this repository.
+In contrast to the `letsencrypt` container, the `nginx` container requires having a config folder on your host. An `nginx.conf` configuration file is required on the host machine, and is included in the `nginx` directory of this repository.
 
-1. Navigate to the `nginx.conf` and `default.conf` files and update the following variables with the appropriate values:
+1. Navigate to the `nginx.conf` file and update the following variables with the appropriate values:
 
 - `server_name  <example.com>`
 
